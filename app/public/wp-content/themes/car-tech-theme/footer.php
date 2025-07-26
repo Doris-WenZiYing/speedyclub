@@ -1,6 +1,6 @@
 <?php
 /**
- * 網站頁腳模板
+ * 網站頁腳模板 - Speedy 競速車業改裝
  * 檔案路徑: app/public/wp-content/themes/car-tech-theme/footer.php
  */
 ?>
@@ -10,15 +10,15 @@
         <div class="container">
             <div class="footer-sections">
                 <div class="footer-section">
-                    <h3 class="footer-title"><?php bloginfo('name'); ?></h3>
+                    <h3 class="footer-title"><?php echo get_site_setting('company_name') ?: 'Speedy 競速車業改裝'; ?></h3>
                     <p class="footer-description">
-                        <?php echo esc_html(get_bloginfo('description') ?: '專業的汽車科技解決方案提供商，致力於創新與卓越。'); ?>
+                        <?php echo get_site_setting('company_description') ?: '專業改裝不只是升級，更是風格態度的展現。我們提供歐日空力套件品牌代理、客製化改裝設計、專業安裝施工等一站式服務。'; ?>
                     </p>
                     <div class="social-links">
-                        <?php if (get_social_url('facebook')) : ?>
-                            <a href="<?php echo esc_url(get_social_url('facebook')); ?>" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                        <?php if (get_social_url('fb')) : ?>
+                            <a href="<?php echo esc_url(get_social_url('fb')); ?>" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                    <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24h11.494V14.708h-3.13v-3.622h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.794.143v3.24h-1.917c-1.504 0-1.796.715-1.796 1.764v2.313h3.59l-.467 3.622h-3.123V24h6.116C23.407 24 24 23.407 24 22.674V1.326C24 .593 23.407 0 22.675 0z"/>
                                 </svg>
                             </a>
                         <?php endif; ?>
@@ -31,13 +31,22 @@
                             </a>
                         <?php endif; ?>
                         
-                        <?php if (get_social_url('linkedin')) : ?>
-                            <a href="<?php echo esc_url(get_social_url('linkedin')); ?>" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <?php if (get_social_url('youtube')) : ?>
+                            <a href="<?php echo esc_url(get_social_url('youtube')); ?>" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </a>
                         <?php endif; ?>
+
+                        <?php if (get_social_url('line')) : ?>
+                            <a href="<?php echo esc_url(get_social_url('line')); ?>" class="social-link" aria-label="Line" target="_blank" rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12.017 0C5.396 0 .029 4.285.029 9.568c0 4.518 4.008 8.295 9.435 9.437.515-.36.976-.814 1.352-1.34.411-.578.77-1.213 1.048-1.886.051-.125.098-.252.143-.379.344-.97.535-2.008.535-3.079 0-1.071-.191-2.109-.535-3.079-.045-.127-.092-.254-.143-.379-.278-.673-.637-1.308-1.048-1.886C10.454.814 9.993.36 9.478 0H12.017zm-5.982 13.397c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11.965 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                </svg>
+                            </a>
+                        <?php endif; ?>
+                    
                     </div>
                 </div>
                 
@@ -54,23 +63,24 @@
                     } else {
                         echo '<ul class="footer-links">';
                         echo '<li><a href="' . esc_url(home_url('/')) . '">首頁</a></li>';
-                        echo '<li><a href="#products">產品展示</a></li>';
+                        echo '<li><a href="#products">改裝產品</a></li>';
                         echo '<li><a href="#services">專業服務</a></li>';
                         echo '<li><a href="#about">關於我們</a></li>';
                         echo '<li><a href="#contact">聯絡我們</a></li>';
+                        echo '<li><a href="' . esc_url(get_post_type_archive_link('car_product')) . '">產品目錄</a></li>';
                         echo '</ul>';
                     }
                     ?>
                 </div>
                 
                 <div class="footer-section">
-                    <h3 class="footer-title">產品類別</h3>
+                    <h3 class="footer-title">改裝分類</h3>
                     <ul class="footer-links">
                         <?php
                         $categories = get_terms(array(
                             'taxonomy' => 'car_category',
                             'hide_empty' => false,
-                            'number' => 5
+                            'number' => 6
                         ));
                         
                         if (!empty($categories) && !is_wp_error($categories)) {
@@ -78,12 +88,13 @@
                                 echo '<li><a href="' . esc_url(get_term_link($category)) . '">' . esc_html($category->name) . '</a></li>';
                             }
                         } else {
-                            // 預設類別
-                            echo '<li><a href="#">電動系統</a></li>';
-                            echo '<li><a href="#">智能配件</a></li>';
-                            echo '<li><a href="#">安全設備</a></li>';
-                            echo '<li><a href="#">性能升級</a></li>';
-                            echo '<li><a href="#">客製化服務</a></li>';
+                            // 預設分類
+                            echo '<li><a href="#contact">前保桿套件</a></li>';
+                            echo '<li><a href="#contact">後保桿套件</a></li>';
+                            echo '<li><a href="#contact">側裙套件</a></li>';
+                            echo '<li><a href="#contact">尾翼改裝</a></li>';
+                            echo '<li><a href="#contact">寬體套件</a></li>';
+                            echo '<li><a href="#contact">客製化改裝</a></li>';
                         }
                         ?>
                     </ul>
@@ -92,10 +103,38 @@
                 <div class="footer-section">
                     <h3 class="footer-title">聯絡資訊</h3>
                     <div class="footer-contact">
-                        <p><?php echo esc_html(get_contact_info('address') ?: '台北市信義區信義路五段7號'); ?></p>
-                        <p>電話: <?php echo esc_html(get_contact_info('phone') ?: '+886-2-1234-5678'); ?></p>
-                        <p>郵件: <?php echo esc_html(get_contact_info('email') ?: 'info@cartech.com'); ?></p>
-                        <p>營業時間: 週一至週五 9:00-18:00</p>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <span><?php echo esc_html(get_contact_info('address')); ?></span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="contact-icon">📞</span>
+                            <span>
+                                <?php echo esc_html(get_contact_info('phone_1')); ?>
+                                <?php if (get_contact_info('phone_2')) : ?>
+                                    <br><?php echo esc_html(get_contact_info('phone_2')); ?>
+                                <?php endif; ?>
+                            </span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="contact-icon">✉️</span>
+                            <span><?php echo esc_html(get_contact_info('email')); ?></span>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="contact-icon">🕒</span>
+                            <span><?php echo esc_html(get_contact_info('business_hours')); ?></span>
+                        </div>
+                        
+                        <div class="contact-item line-info">
+                            <span class="contact-icon">💬</span>
+                            <span>
+                                LINE 官方: <?php echo esc_html(get_contact_info('line_official_id')); ?><br>
+                                LINE ID: <?php echo esc_html(get_contact_info('line_id')); ?>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,16 +144,75 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="footer-bottom-content">
-                <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. 版權所有.</p>
+                <p>&copy; <?php echo date('Y'); ?> <?php echo get_site_setting('company_name') ?: 'Speedy 競速車業改裝'; ?>. 版權所有.</p>
                 <div class="footer-bottom-links">
-                    <a href="#">隱私政策</a>
-                    <a href="#">使用條款</a>
-                    <a href="#">網站地圖</a>
+                    <a href="#privacy">隱私政策</a>
+                    <a href="#terms">服務條款</a>
+                    <a href="#sitemap">網站地圖</a>
+                    <a href="https://www.speedy168.com" target="_blank">官方網站</a>
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
+<style>
+/* 頁腳增強樣式 */
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contact-icon {
+    font-size: 1.1rem;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.line-info {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.line-link {
+    background: #00c300 !important;
+}
+
+.line-link:hover {
+    background: #00a000 !important;
+    transform: translateY(-3px);
+}
+
+.social-links .social-link {
+    transition: all 0.3s ease;
+}
+
+.social-links .social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* 響應式頁腳 */
+@media (max-width: 768px) {
+    .footer-sections {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .contact-item {
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+</style>
 
 <?php wp_footer(); ?>
 </body>
