@@ -1,0 +1,47 @@
+# ========== WordPress ==========
+/wp-admin/
+/wp-includes/
+wp-config.php
+wp-config-sample.php
+readme.html
+license.txt
+xmlrpc.php
+wp-cron.php
+wp-content/uploads/
+app/public/wp-activate.php
+app/public/wp-blog-header.php
+app/public/wp-comments-post.php
+app/public/wp-config-sample.php
+app/public/wp-cron.php
+app/public/wp-links-opml.php
+app/public/wp-load.php
+app/public/wp-login.php
+app/public/wp-mail.php
+app/public/wp-settings.php
+app/public/wp-signup.php
+app/public/wp-trackback.php
+
+# WordPress Default Themes (忽略所有預設主題)
+app/public/wp-content/themes/twentytwentyfive/
+app/public/wp-content/themes/twentytwentyfour/
+app/public/wp-content/themes/twentytwentythree/
+
+# ========== LocalWP 專用 ==========
+conf/
+*.sql
+*.zip
+*.tar.gz
+*.log
+
+# ========== 系統與環境 ==========
+.env
+.DS_Store
+.htaccess
+.env
+Thumbs.db
+node_modules/
+vendor/
+
+app/public/wp-admin/
+
+app/public/wp-includes/
