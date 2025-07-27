@@ -783,14 +783,48 @@ body {
         height: auto;
     }
     
+    /* 統計數據區塊 */
     .about-stats {
-        flex-direction: column;
-        gap: 20px;
+        display: flex;
+        gap: 40px;
+        margin-bottom: 40px;
+        justify-content: center; /* 居中對齊 */
+        flex-wrap: wrap; /* 允許換行但盡量保持橫向 */
     }
-    
+
+    .stat-item {
+        text-align: center;
+        flex: 1; /* 平均分配空間 */
+        min-width: 120px; /* 設定最小寬度 */
+    }
+
+    .stat-number {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        font-weight: 900;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+    }
+
+    .stat-label {
+        color: var(--text-secondary);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    /* 按鈕區塊 */
     .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center; /* 居中對齊 */
+    }
+
+    .hero-buttons .btn {
+        flex: 1; /* 平均分配空間 */
+        min-width: 160px; /* 設定最小寬度 */
+        max-width: 200px; /* 設定最大寬度 */
+        text-align: center;
     }
     
     .section-title {
@@ -2434,6 +2468,12 @@ body {
     }
     
     .about-stats {
+        gap: 30px;
+        justify-content: center;
+    }
+    
+    .hero-buttons {
+        gap: 15px;
         justify-content: center;
     }
 }
@@ -2524,13 +2564,39 @@ body {
     }
     
     .about-stats {
-        flex-direction: column;
+        flex-direction: row; /* 強制橫向排列 */
         gap: 20px;
+        margin-bottom: 30px;
+        justify-content: space-around; /* 平均分散 */
+    }
+    
+    .stat-item {
+        flex: 1;
+        min-width: 100px;
+    }
+    
+    .stat-number {
+        font-size: 2rem; /* 稍微縮小字體 */
+        margin-bottom: 8px;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+        line-height: 1.2;
     }
     
     .hero-buttons {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* 強制橫向排列 */
+        gap: 15px;
+        justify-content: center;
+    }
+    
+    .hero-buttons .btn {
+        flex: 1;
+        min-width: 140px;
+        max-width: 180px;
+        padding: 12px 20px; /* 稍微縮小內邊距 */
+        font-size: 0.9rem; /* 稍微縮小字體 */
     }
     
     .section-title {
