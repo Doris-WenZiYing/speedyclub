@@ -21,6 +21,7 @@ app/public/wp-settings.php
 app/public/wp-signup.php
 app/public/wp-trackback.php
 app/public/wp-content/themes/car-tech-theme/assets/
+app/public/wp-content/mu-plugins/local-by-flywheel-live-link-helper.php
 
 # WordPress Default Themes (忽略所有預設主題)
 app/public/wp-content/themes/twentytwentyfive/

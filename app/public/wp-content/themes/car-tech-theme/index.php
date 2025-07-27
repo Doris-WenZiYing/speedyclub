@@ -6,8 +6,8 @@
 
 get_header(); ?>
 
-<!-- 英雄區塊 -->
-<section class="hero-section">
+<!-- 英雄區塊 + 關於我們 -->
+<section class="hero-about-section">
     <div class="hero-background">
         <!-- 背景影片 -->
         <video autoplay muted loop id="hero-video">
@@ -19,35 +19,88 @@ get_header(); ?>
     <!-- 動態背景粒子效果 -->
     <div class="particles-container" id="particles-js"></div>
     
-    <div class="hero-content">
+    <div class="hero-about-content">
         <div class="container">
-            <div class="hero-text-animated">
-                <h1 class="hero-title">
-                    <span class="title-line">極致改裝</span>
-                    <span class="title-line">無限可能</span>
-                </h1>
-                <p class="hero-subtitle">專業空力套件改裝 × 客製化設計 × 全車系服務</p>
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">🏁</span>
-                        <span>專業改裝</span>
+            <div class="hero-about-grid">
+                <!-- 左側：關於我們內容 -->
+                <div class="about-content-hero">
+                    <h1 class="hero-title">
+                        <span class="title-line">SPEEDY 競速汽車</span>
+                        <span class="title-subtitle">全車系空力套件與改裝</span>
+                    </h1>
+                    
+                    <div class="about-features">
+                        <div class="feature-row">
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>歐日空力套件品牌代理</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>專業客製化改裝服務</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>汽車百貨精品供應</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>高質感空力設計，匹配各大車系</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>改裝安裝烤漆施工門市配合</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>快速、安心、專業服務</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-bullet">✓</span>
+                                <span>全台配送，快速出貨，安心有保障</span>
+                            </div>
+                            <div class="feature-item highlight">
+                                <span class="feature-bullet">✓</span>
+                                <span><strong>台北 台中 台南 高雄</strong>可配合施工烤漆安裝服務</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
-                        <span>快速施工</span>
+                    
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number">15</h3>
+                            <p class="stat-label">年專業經驗</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">5000</h3>
+                            <p class="stat-label">改裝案例</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">50</h3>
+                            <p class="stat-label">合作品牌</p>
+                        </div>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🎯</span>
-                        <span>客製服務</span>
+                    
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">探索產品</a>
+                        <a href="#contact" class="btn btn-secondary">立即諮詢</a>
                     </div>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">探索產品</a>
-                    <a href="#contact" class="btn btn-secondary">立即諮詢</a>
+                
+                <!-- 右側：圖片 -->
+                <div class="about-image-hero">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/speedy-workshop.png" alt="SPEEDY 競速汽車工作室">
+                    <div class="about-image-overlay">
+                        <div class="about-badge">
+                            <span>專業改裝</span>
+                            <span>15年經驗</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="scroll-indicator">
         <div class="scroll-arrow"></div>
     </div>
@@ -381,184 +434,58 @@ get_header(); ?>
     </div>
 </section>
 
-<!-- 關於我們區塊 -->
-<section class="about-section">
-    <div class="container">
-        <div class="about-content">
-            <div class="about-text">
-                <h2 class="section-title">SPEEDY 競速汽車</h2>
-                <h3 class="about-subtitle">全車系空力套件與改裝</h3>
-                
-                <div class="about-features">
-                    <div class="feature-row">
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>歐日空力套件品牌代理</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>專業客製化改裝服務</span>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>改裝不只是升級，是風格態度</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>專業套件開發、設計、量產</span>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>汽車百貨精品供應</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>高質感空力設計，匹配各大車系</span>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>改裝安裝烤漆施工門市配合</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>快速、安心、專業服務</span>
-                        </div>
-                    </div>
-                    <div class="feature-row">
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span>全台配送，快速出貨，安心有保障</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-bullet">✓</span>
-                            <span><strong>台北 台中 台南 高雄</strong>可配合施工烤漆安裝服務</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <h3 class="stat-number">15</h3>
-                        <p class="stat-label">年專業經驗</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="stat-number">5000</h3>
-                        <p class="stat-label">改裝案例</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3 class="stat-number">50</h3>
-                        <p class="stat-label">合作品牌</p>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/speedy-workshop.png" alt="SPEEDY 競速汽車工作室" >
-                <!-- <div class="about-image-overlay">
-                    <div class="about-badge">
-                        <span>專業改裝</span>
-                        <span>15年經驗</span>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- 聯絡表單區塊 -->
+<!-- 簡化的聯絡表單區塊 -->
 <section id="contact" class="contact-section">
     <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">聯絡我們</h2>
-            <p class="section-subtitle">讓我們協助您打造夢想中的愛車</p>
-        </div>
-        
         <div class="contact-content">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">
+            <!-- 聯絡資訊和表單 -->
+            <div class="contact-form-section">
+                <div class="section-header">
+                    <h2 class="section-title">聯絡我們</h2>
+                    <p class="section-subtitle">讓我們協助您打造夢想中的愛車</p>
+                </div>
+                
+                <!-- 聯絡資訊 -->
+                <div class="contact-info-compact">
+                    <div class="contact-item-compact">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                             <circle cx="12" cy="10" r="3"/>
                         </svg>
+                        <span><?php echo get_contact_info('address'); ?></span>
                     </div>
-                    <div class="contact-details">
-                        <h3>門市地址</h3>
-                        <p>新北市林口區文化北路二段550巷30弄6號</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
+                    
+                    <div class="contact-item-compact">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
                         </svg>
+                        <span><?php echo get_contact_info('phone_1'); ?> / <?php echo get_contact_info('phone_2'); ?></span>
                     </div>
-                    <div class="contact-details">
-                        <h3>聯絡電話</h3>
-                        <p>(02)8988-3180 / (02)8285-7932</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
+                    
+                    <div class="contact-item-compact">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
                         </svg>
+                        <span>LINE: @speedyvip</span>
                     </div>
-                    <div class="contact-details">
-                        <h3>電子郵件</h3>
-                        <p>cyl5656@yahoo.com.tw</p>
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
+                    
+                    <div class="contact-item-compact">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <circle cx="12" cy="12" r="10"/>
                             <polyline points="12,6 12,12 16,14"/>
                         </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>營業時間</h3>
-                        <p>週一至週六 09:00 ~ 19:00<br><small>(週六採預約制)</small></p>
+                        <span><?php echo get_contact_info('business_hours'); ?></span>
                     </div>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                            <path d="M8 9h8M8 13h6"/>
-                        </svg>
-                    </div>
-                    <div class="contact-details">
-                        <h3>LINE 官方</h3>
-                        <p>官方ID: @speedyvip<br>LINE ID: speedyclub</p>
-                    </div>
-                </div>
-            </div>
-            
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
+                <!-- 聯絡表單 -->
+                <form class="contact-form-compact" id="contactForm">
+                    <div class="form-row">
                         <input type="text" name="name" placeholder="您的姓名" required>
-                    </div>
-                    <div class="form-group">
                         <input type="email" name="email" placeholder="電子郵件" required>
                     </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
+                    <div class="form-row">
                         <input type="tel" name="phone" placeholder="聯絡電話">
-                    </div>
-                    <div class="form-group">
                         <select name="car_brand" required>
                             <option value="">選擇車款品牌</option>
                             <option value="BMW">BMW</option>
@@ -572,326 +499,14 @@ get_header(); ?>
                             <option value="其他">其他品牌</option>
                         </select>
                     </div>
-                </div>
-                <div class="form-group">
                     <input type="text" name="subject" placeholder="改裝需求 (例：前保桿套件、寬體改裝等)" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="詳細說明您的改裝需求，我們將為您提供專業建議" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">立即諮詢</button>
-            </form>
+                    <textarea name="message" placeholder="詳細說明您的改裝需求" rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">立即諮詢</button>
+                </form>
+            </div>
         </div>
     </div>
 </section>
-
-<style>
-/* 英雄區塊增強樣式 */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-#hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -3;
-    transform: translate(-50%, -50%);
-    filter: brightness(0.3);
-}
-
-.particles-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.hero-text-animated {
-    animation: heroFadeIn 2s ease-out;
-}
-
-@keyframes heroFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.title-line {
-    display: block;
-    overflow: hidden;
-}
-
-.hero-features {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 30px 0 40px 0;
-    flex-wrap: wrap;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    background: rgba(0, 212, 255, 0.1);
-    border-radius: 25px;
-    border: 1px solid rgba(0, 212, 255, 0.3);
-    backdrop-filter: blur(10px);
-}
-
-.feature-icon {
-    font-size: 1.2rem;
-}
-
-/* 產品區塊增強 */
-.products-cta {
-    text-align: center;
-    margin-top: 60px;
-}
-
-/* 產品分類區塊 */
-.categories-section {
-    padding: 120px 0;
-    background: var(--bg-light);
-}
-
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.category-card {
-    text-align: center;
-    padding: 40px 20px;
-    background: var(--bg-card);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    border: 1px solid var(--border-color);
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.category-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
-    transition: left 0.8s ease;
-}
-
-.category-card:hover::before {
-    left: 100%;
-}
-
-.category-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
-    box-shadow: 0 20px 50px var(--shadow-medium);
-}
-
-.category-icon {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    transition: transform 0.4s ease;
-}
-
-.category-card:hover .category-icon {
-    transform: scale(1.1) rotateY(180deg);
-}
-
-.category-name {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: var(--text-primary);
-}
-
-.category-description {
-    color: var(--text-secondary);
-    margin-bottom: 25px;
-    line-height: 1.6;
-}
-
-.category-link {
-    display: inline-block;
-    padding: 10px 25px;
-    background: transparent;
-    color: var(--primary-color);
-    text-decoration: none;
-    border: 2px solid var(--primary-color);
-    border-radius: 25px;
-    transition: all 0.3s ease;
-}
-
-.category-link:hover {
-    background: var(--primary-color);
-    color: var(--bg-dark);
-    transform: translateY(-2px);
-}
-
-/* 關於我們增強樣式 */
-.about-subtitle {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin-bottom: 30px;
-    font-weight: 600;
-}
-
-.about-features {
-    margin-bottom: 40px;
-}
-
-.feature-row {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-}
-
-.about-features .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    min-width: 250px;
-}
-
-.feature-bullet {
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.feature-item.highlight {
-    background: rgba(0, 212, 255, 0.1);
-    padding: 10px 15px;
-    border-radius: 10px;
-    border-left: 4px solid var(--primary-color);
-}
-
-.about-image {
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.about-image-overlay {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.about-badge {
-    background: var(--gradient-primary);
-    padding: 15px 20px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.about-badge span {
-    display: block;
-    color: white;
-    font-weight: 600;
-}
-
-.about-badge span:first-child {
-    font-size: 1.1rem;
-}
-
-.about-badge span:last-child {
-    font-size: 0.9rem;
-    opacity: 0.9;
-}
-
-/* 聯絡表單增強 */
-.contact-form select {
-    width: 100%;
-    padding: 15px 20px;
-    background: var(--bg-light);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    color: var(--text-primary);
-    font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.contact-form select:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px var(--shadow-light);
-}
-
-.contact-form select option {
-    background: var(--bg-dark);
-    color: var(--text-primary);
-}
-
-/* 響應式設計增強 */
-@media (max-width: 768px) {
-    .hero-features {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .feature-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .about-features .feature-item {
-        min-width: 100%;
-    }
-    
-    .categories-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-features .feature-item {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .about-badge {
-        padding: 10px 15px;
-    }
-    
-    .about-badge span:first-child {
-        font-size: 1rem;
-    }
-}
-</style>
 
 <script>
 // 動態粒子背景效果
@@ -960,7 +575,7 @@ function createParticles() {
 }
 
 function animateHeroTitle() {
-    const titleLines = document.querySelectorAll('.title-line');
+    const titleLines = document.querySelectorAll('.title-line, .title-subtitle');
     
     titleLines.forEach((line, index) => {
         line.style.opacity = '0';

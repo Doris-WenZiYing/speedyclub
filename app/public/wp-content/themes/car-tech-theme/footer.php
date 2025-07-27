@@ -40,9 +40,9 @@
                         <?php endif; ?>
 
                         <?php if (get_social_url('line')) : ?>
-                            <a href="<?php echo esc_url(get_social_url('line')); ?>" class="social-link" aria-label="Line" target="_blank" rel="noopener">
+                            <a href="<?php echo esc_url(get_social_url('line')); ?>" class="social-link line-link" aria-label="Line" target="_blank" rel="noopener">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M12.017 0C5.396 0 .029 4.285.029 9.568c0 4.518 4.008 8.295 9.435 9.437.515-.36.976-.814 1.352-1.34.411-.578.77-1.213 1.048-1.886.051-.125.098-.252.143-.379.344-.97.535-2.008.535-3.079 0-1.071-.191-2.109-.535-3.079-.045-.127-.092-.254-.143-.379-.278-.673-.637-1.308-1.048-1.886C10.454.814 9.993.36 9.478 0H12.017zm-5.982 13.397c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm11.965 0c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z"/>
+                                    <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
                                 </svg>
                             </a>
                         <?php endif; ?>
@@ -156,63 +156,76 @@
     </div>
 </footer>
 
-<style>
-/* 頁腳增強樣式 */
-.contact-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.contact-icon {
-    font-size: 1.1rem;
-    margin-top: 2px;
-    flex-shrink: 0;
-}
-
-.line-info {
-    background: rgba(0, 212, 255, 0.1);
-    padding: 12px;
-    border-radius: 8px;
-    border-left: 3px solid var(--primary-color);
-}
-
-.line-link {
-    background: #00c300 !important;
-}
-
-.line-link:hover {
-    background: #00a000 !important;
-    transform: translateY(-3px);
-}
-
-.social-links .social-link {
-    transition: all 0.3s ease;
-}
-
-.social-links .social-link:hover {
-    transform: translateY(-3px) scale(1.1);
-}
-
-/* 響應式頁腳 */
-@media (max-width: 768px) {
-    .footer-sections {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+<script>
+// 頁腳載入動畫
+document.addEventListener('DOMContentLoaded', function() {
+    const footerSections = document.querySelectorAll('.footer-section');
     
-    .contact-item {
-        font-size: 0.9rem;
-    }
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry, index) {
+            if (entry.isIntersecting) {
+                setTimeout(function() {
+                    entry.target.classList.add('visible');
+                }, index * 200);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
     
-    .social-links {
-        justify-content: center;
-        margin-top: 20px;
+    footerSections.forEach(function(section) {
+        observer.observe(section);
+    });
+    
+    // 社群媒體圖標懸停效果增強
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(function(link) {
+        link.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 8px 25px rgba(0, 212, 255, 0.4)';
+        });
+        
+        link.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '';
+        });
+    });
+    
+    // LINE 連結特殊效果
+    const lineLink = document.querySelector('.line-link');
+    if (lineLink) {
+        lineLink.addEventListener('mouseenter', function() {
+            this.style.boxShadow = '0 8px 25px rgba(0, 195, 0, 0.4)';
+        });
+        
+        lineLink.addEventListener('mouseleave', function() {
+            this.style.boxShadow = '';
+        });
     }
-}
-</style>
+});
+
+// 為頁腳連結添加平滑滾動
+document.addEventListener('DOMContentLoaded', function() {
+    const footerLinks = document.querySelectorAll('.footer-links a[href^="#"]');
+    
+    footerLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            if (targetSection) {
+                const headerHeight = document.querySelector('.main-header')?.offsetHeight || 80;
+                const targetPosition = targetSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+</script>
 
 <?php wp_footer(); ?>
 </body>
