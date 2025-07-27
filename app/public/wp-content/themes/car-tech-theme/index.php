@@ -30,39 +30,37 @@ get_header(); ?>
                     </h1>
                     
                     <div class="about-features">
-                        <div class="feature-row">
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>歐日空力套件品牌代理</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>專業客製化改裝服務</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>汽車百貨精品供應</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>高質感空力設計，匹配各大車系</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>改裝安裝烤漆施工門市配合</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>快速、安心、專業服務</span>
-                            </div>
-                            <div class="feature-item">
-                                <span class="feature-bullet">✓</span>
-                                <span>全台配送，快速出貨，安心有保障</span>
-                            </div>
-                            <div class="feature-item highlight">
-                                <span class="feature-bullet">✓</span>
-                                <span><strong>台北 台中 台南 高雄</strong>可配合施工烤漆安裝服務</span>
-                            </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>歐日空力套件品牌代理</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>專業客製化改裝服務</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>汽車百貨精品供應</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>高質感空力設計，匹配各大車系</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>改裝安裝烤漆施工門市配合</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>快速、安心、專業服務</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-bullet">✓</span>
+                            <span>全台配送，快速出貨，安心有保障</span>
+                        </div>
+                        <div class="feature-item feature-highlight">
+                            <span class="feature-bullet">✓</span>
+                            <span><strong>台北 台中 台南 高雄</strong> 可配合施工烤漆安裝服務</span>
                         </div>
                     </div>
                     
@@ -90,12 +88,6 @@ get_header(); ?>
                 <!-- 右側：圖片 -->
                 <div class="about-image-hero">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/speedy-workshop.png" alt="SPEEDY 競速汽車工作室">
-                    <div class="about-image-overlay">
-                        <div class="about-badge">
-                            <span>專業改裝</span>
-                            <span>15年經驗</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -147,9 +139,9 @@ get_header(); ?>
                         <p class="product-excerpt"><?php the_excerpt(); ?></p>
                         <div class="product-meta">
                             <?php
-                            $brands = get_the_terms(get_the_ID(), 'car_brand');
-                            if ($brands && !is_wp_error($brands)) {
-                                echo '<span class="product-brand">' . esc_html($brands[0]->name) . '</span>';
+                            $categories = get_the_terms(get_the_ID(), 'car_category');
+                            if ($categories && !is_wp_error($categories)) {
+                                echo '<span class="product-category">' . esc_html($categories[0]->name) . '</span>';
                             }
                             ?>
                         </div>
@@ -163,38 +155,38 @@ get_header(); ?>
                 $sample_products = array(
                     array(
                         'title' => 'BMW F30 M Performance 前保桿',
-                        'description' => '原廠風格設計，完美融合運動與優雅，提升車輛整體視覺效果',
-                        'brand' => 'BMW',
+                        'description' => '原廠風格設計，完美融合運動與優雅',
+                        'category' => '前保桿套件',
                         'image' => 'bmw-f30-front.jpg'
                     ),
                     array(
                         'title' => 'Tesla Model 3 碳纖維尾翼',
-                        'description' => '高品質碳纖維材質，輕量化設計，增強下壓力與視覺衝擊',
-                        'brand' => 'Tesla',
+                        'description' => '高品質碳纖維材質，輕量化設計',
+                        'category' => '尾翼改裝',
                         'image' => 'tesla-model3-spoiler.jpg'
                     ),
                     array(
                         'title' => 'Mercedes C63 AMG 側裙',
-                        'description' => '競技風格設計，完美貼合車身線條，展現強烈運動氣息',
-                        'brand' => 'Mercedes',
+                        'description' => '競技風格設計，完美貼合車身線條',
+                        'category' => '側裙套件',
                         'image' => 'mercedes-c63-side.jpg'
                     ),
                     array(
                         'title' => 'Audi RS4 寬體套件',
-                        'description' => '全套寬體改裝，包含前後保桿、側裙、輪拱，打造極致視覺效果',
-                        'brand' => 'Audi',
+                        'description' => '全套寬體改裝，打造極致視覺效果',
+                        'category' => '寬體套件',
                         'image' => 'audi-rs4-widebody.jpg'
                     ),
                     array(
                         'title' => 'Porsche 911 GT3 尾翼',
-                        'description' => '賽車級空力設計，提供優異下壓力，兼具美觀與實用性',
-                        'brand' => 'Porsche',
+                        'description' => '賽車級空力設計，提供優異下壓力',
+                        'category' => '碳纖維套件',
                         'image' => 'porsche-911-wing.jpg'
                     ),
                     array(
                         'title' => 'Lexus IS350 前下巴',
-                        'description' => '精緻工藝製作，增加前臉層次感，提升整車運動化外觀',
-                        'brand' => 'Lexus',
+                        'description' => '精緻工藝製作，增加前臉層次感',
+                        'category' => '前保桿套件',
                         'image' => 'lexus-is350-lip.jpg'
                     )
                 );
@@ -205,14 +197,14 @@ get_header(); ?>
                     <div class="product-image">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/<?php echo $product['image']; ?>" alt="<?php echo $product['title']; ?>">
                         <div class="product-overlay">
-                            <a href="#contact" class="product-link">立即詢價</a>
+                            <a href="<?php echo get_post_type_archive_link('car_product'); ?>?product=<?php echo urlencode($product['title']); ?>" class="product-link">查看詳情</a>
                         </div>
                     </div>
                     <div class="product-info">
                         <h3 class="product-title"><?php echo $product['title']; ?></h3>
                         <p class="product-excerpt"><?php echo $product['description']; ?></p>
                         <div class="product-meta">
-                            <span class="product-brand"><?php echo $product['brand']; ?></span>
+                            <span class="product-category"><?php echo $product['category']; ?></span>
                         </div>
                     </div>
                 </div>
@@ -258,21 +250,102 @@ get_header(); ?>
                     </div>
                     <h3 class="category-name"><?php echo esc_html($category->name); ?></h3>
                     <p class="category-description"><?php echo esc_html($category->description ?: '專業改裝套件'); ?></p>
-                    <a href="<?php echo esc_url(get_term_link($category)); ?>" class="category-link">查看產品</a>
+                    <a href="<?php echo get_post_type_archive_link('car_product'); ?>" class="category-link">查看產品</a>
                 </div>
             <?php 
                 endforeach;
             else :
                 // 預設分類
                 $sample_categories = array(
-                    array('name' => '前保桿套件', 'icon' => '🚗', 'description' => '各車系前保桿改裝'),
-                    array('name' => '後保桿套件', 'icon' => '🏁', 'description' => '後保桿與尾段設計'),
-                    array('name' => '側裙套件', 'icon' => '⚡', 'description' => '車身側面空力套件'),
-                    array('name' => '尾翼改裝', 'icon' => '🎯', 'description' => '各式尾翼與擾流板'),
-                    array('name' => '寬體套件', 'icon' => '💪', 'description' => '全套寬體改裝方案'),
-                    array('name' => '碳纖維套件', 'icon' => '🖤', 'description' => '輕量化碳纖維部件'),
-                    array('name' => '輪拱套件', 'icon' => '⭕', 'description' => '輪拱加寬與造型'),
-                    array('name' => '客製化改裝', 'icon' => '🎨', 'description' => '專屬客製化服務')
+                    array(
+                        'name' => '前保桿套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="9" width="20" height="6" rx="2"/>
+                                    <path d="M4 9V7a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2"/>
+                                    <circle cx="7" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="17" cy="12" r="1" fill="currentColor"/>
+                                </svg>', 
+                        'description' => '運動化前保桿設計', 
+                        'slug' => 'front-bumper'
+                    ),
+                    array(
+                        'name' => '後保桿套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="9" width="20" height="6" rx="2"/>
+                                    <path d="M4 15v2a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-2"/>
+                                    <path d="M8 15h8" stroke-width="3"/>
+                                </svg>', 
+                        'description' => '後保桿擴散器設計', 
+                        'slug' => 'rear-bumper'
+                    ),
+                    array(
+                        'name' => '側裙套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <ellipse cx="12" cy="12" rx="9" ry="5"/>
+                                    <path d="M3 12h18"/>
+                                    <circle cx="7" cy="12" r="1" fill="currentColor"/>
+                                    <circle cx="17" cy="12" r="1" fill="currentColor"/>
+                                </svg>', 
+                        'description' => '流線型側裙造型', 
+                        'slug' => 'side-skirts'
+                    ),
+                    array(
+                        'name' => '尾翼改裝', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 18h18"/>
+                                    <path d="M5 14h14l-2-4H7l-2 4z"/>
+                                    <path d="M7 10h10"/>
+                                    <path d="M12 6v4"/>
+                                </svg>', 
+                        'description' => '競技級尾翼設計', 
+                        'slug' => 'spoilers'
+                    ),
+                    array(
+                        'name' => '寬體套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="4" y="8" width="16" height="8" rx="2"/>
+                                    <path d="M2 10h2M20 10h2"/>
+                                    <path d="M2 14h2M20 14h2"/>
+                                    <circle cx="8" cy="12" r="2"/>
+                                    <circle cx="16" cy="12" r="2"/>
+                                </svg>', 
+                        'description' => '寬體爆龜套件', 
+                        'slug' => 'widebody'
+                    ),
+                    array(
+                        'name' => '碳纖維套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12,2 22,7 22,17 12,22 2,17 2,7"/>
+                                    <path d="M12 2v20"/>
+                                    <path d="M2 7l10 5 10-5"/>
+                                </svg>', 
+                        'description' => '輕量化碳纖維部件', 
+                        'slug' => 'carbon-fiber'
+                    ),
+                    array(
+                        'name' => '輪拱套件', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="8"/>
+                                    <circle cx="12" cy="12" r="4"/>
+                                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                                    <path d="M12 4v4"/>
+                                    <path d="M12 16v4"/>
+                                </svg>', 
+                        'description' => '輪拱造型強化', 
+                        'slug' => 'fender-flares'
+                    ),
+                    array(
+                        'name' => '客製化改裝', 
+                        'icon' => '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M9 3v18"/>
+                                    <path d="M15 3v18"/>
+                                    <path d="M3 9h18"/>
+                                    <path d="M3 15h18"/>
+                                </svg>', 
+                        'description' => '專屬訂製服務', 
+                        'slug' => 'custom'
+                    )
                 );
                 
                 foreach ($sample_categories as $category) :
@@ -283,7 +356,7 @@ get_header(); ?>
                     </div>
                     <h3 class="category-name"><?php echo $category['name']; ?></h3>
                     <p class="category-description"><?php echo $category['description']; ?></p>
-                    <a href="#contact" class="category-link">立即詢價</a>
+                    <a href="<?php echo get_post_type_archive_link('car_product'); ?>?category=<?php echo $category['slug']; ?>" class="category-link">查看產品</a>
                 </div>
             <?php endforeach;
             endif; ?>
@@ -414,7 +487,10 @@ get_header(); ?>
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M20 7h-9M14 3v4M6 21V9a3 3 0 0 1 3-3h2l2-2h4l2 2h2a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3Z"/>
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <path d="M16 10a4 4 0 01-8 0"/>
+                    </svg>
                     </svg>
                 </div>
                 <h3 class="service-title">汽車百貨精品</h3>
@@ -423,8 +499,10 @@ get_header(); ?>
             
             <div class="service-card">
                 <div class="service-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                        <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M9 12l2 2 4-4"/>
+                        <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9c1.66 0 3.2.45 4.54 1.23"/>
+                        <path d="M16 4l1.5 1.5L20 3"/>
                     </svg>
                 </div>
                 <h3 class="service-title">套件開發量產</h3>
@@ -464,7 +542,7 @@ get_header(); ?>
                     
                     <div class="contact-item-compact">
                         <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+                            <path d="M24 10.304c0-5.369-5.383-9.738-12-9.738S0 4.935 0 10.304c0 4.814 4.269 8.846 10.036 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.304"/>
                         </svg>
                         <span>LINE: @speedyvip</span>
                     </div>
